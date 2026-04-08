@@ -7,6 +7,7 @@ O foco é entender como o banco de dados reage quando ocorre um erro no meio de 
 - O Problema: Execução Direta (conexao1.php)
 As instruções são enviadas uma a uma.
 Comportamento: O PHP insere user1, user2 e user3. Ao chegar no user4 (que aponta para uma tabela inexistente), o codigo para de ser executado e nao é direcionado para o catch.
+
 Resultado: Os três primeiros usuários permanecem no banco de dados, criando uma "operação incompleta". 
 
 - A Solução: Transações (conexao2.php)
